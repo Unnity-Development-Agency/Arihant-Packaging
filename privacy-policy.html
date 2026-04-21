@@ -1,0 +1,925 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Privacy Policy | Arihant Packaging</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700&family=DM+Sans:wght@300;400;500&family=DM+Serif+Display&display=swap"
+      rel="stylesheet"
+    />
+    <style>
+      :root {
+        --green: #2d6a4f;
+        --green-light: #40916c;
+        --green-pale: #d8f3dc;
+        --cream: #faf9f6;
+        --text: #1b2a22;
+        --muted: #6b7c74;
+        --border: #e0ece5;
+
+        /* Main site tokens — hardcoded for this standalone page */
+        --color-bg-primary: #fcfbf7;
+        --color-terracotta: #d4af37;
+        --font-heading: "DM Serif Display", serif;
+      }
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+      body {
+        font-family: "DM Sans", sans-serif;
+        background: var(--cream);
+        color: var(--text);
+        font-size: 15px;
+        line-height: 1.8;
+      }
+
+      nav {
+        background: #fff;
+        border-bottom: 1px solid var(--border);
+        padding: 18px 40px;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        position: sticky;
+        top: 0;
+        z-index: 100;
+      }
+      .nav-logo {
+        font-family: "Playfair Display", serif;
+        font-size: 1.3rem;
+        color: var(--green);
+        text-decoration: none;
+        font-weight: 700;
+      }
+      .nav-link {
+        color: var(--green-light);
+        text-decoration: none;
+        font-size: 0.85rem;
+        font-weight: 500;
+        letter-spacing: 0.04em;
+      }
+      .nav-link:hover {
+        text-decoration: underline;
+      }
+
+      .hero {
+        background: linear-gradient(135deg, #1b4332 0%, var(--green) 100%);
+        color: white;
+        padding: 64px 40px 48px;
+        text-align: center;
+        position: relative;
+        overflow: hidden;
+      }
+      .hero::before {
+        content: "";
+        position: absolute;
+        width: 350px;
+        height: 350px;
+        background: rgba(255, 255, 255, 0.04);
+        border-radius: 50%;
+        bottom: -80px;
+        left: -60px;
+      }
+      .hero-tag {
+        display: inline-block;
+        background: rgba(255, 255, 255, 0.15);
+        border: 1px solid rgba(255, 255, 255, 0.3);
+        color: #fff;
+        font-size: 0.72rem;
+        font-weight: 500;
+        letter-spacing: 0.12em;
+        text-transform: uppercase;
+        padding: 5px 14px;
+        border-radius: 20px;
+        margin-bottom: 18px;
+      }
+      .hero h1 {
+        font-family: "Playfair Display", serif;
+        font-size: 2.6rem;
+        font-weight: 700;
+        margin-bottom: 10px;
+      }
+      .hero p {
+        color: rgba(255, 255, 255, 0.8);
+        font-size: 0.92rem;
+      }
+
+      .wrapper {
+        max-width: 860px;
+        margin: 0 auto;
+        padding: 56px 24px 80px;
+      }
+
+      .meta-bar {
+        display: flex;
+        align-items: center;
+        gap: 24px;
+        background: #fff;
+        border: 1px solid var(--border);
+        border-radius: 10px;
+        padding: 14px 22px;
+        margin-bottom: 40px;
+        font-size: 0.82rem;
+        color: var(--muted);
+      }
+      .meta-bar span strong {
+        color: var(--text);
+      }
+
+      .commitment-grid {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 16px;
+        margin-bottom: 44px;
+      }
+      .commit-card {
+        background: #fff;
+        border: 1px solid var(--border);
+        border-radius: 12px;
+        padding: 20px 18px;
+        text-align: center;
+      }
+      .commit-card .icon {
+        font-size: 1.6rem;
+        margin-bottom: 8px;
+      }
+      .commit-card h4 {
+        font-size: 0.85rem;
+        font-weight: 600;
+        color: var(--green);
+        margin-bottom: 4px;
+      }
+      .commit-card p {
+        font-size: 0.78rem;
+        color: var(--muted);
+        line-height: 1.5;
+      }
+
+      .section {
+        margin-bottom: 44px;
+      }
+      .section-number {
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        width: 30px;
+        height: 30px;
+        background: var(--green-pale);
+        color: var(--green);
+        font-weight: 700;
+        font-size: 0.78rem;
+        border-radius: 50%;
+        margin-right: 10px;
+        flex-shrink: 0;
+      }
+      .section h2 {
+        font-family: "Playfair Display", serif;
+        font-size: 1.2rem;
+        font-weight: 600;
+        color: var(--green);
+        margin-bottom: 14px;
+        display: flex;
+        align-items: center;
+      }
+      .section p {
+        color: #3a4a41;
+        margin-bottom: 10px;
+      }
+      .section ul {
+        padding-left: 20px;
+      }
+      .section ul li {
+        color: #3a4a41;
+        margin-bottom: 6px;
+      }
+
+      .data-table {
+        width: 100%;
+        border-collapse: collapse;
+        margin: 16px 0;
+        font-size: 0.88rem;
+      }
+      .data-table th {
+        background: var(--green-pale);
+        color: var(--green);
+        padding: 10px 14px;
+        text-align: left;
+        font-weight: 600;
+      }
+      .data-table td {
+        padding: 10px 14px;
+        border-bottom: 1px solid var(--border);
+        vertical-align: top;
+        color: #3a4a41;
+      }
+      .data-table tr:last-child td {
+        border-bottom: none;
+      }
+      .data-table tr:nth-child(even) td {
+        background: #f9fdfb;
+      }
+
+      hr.divider {
+        border: none;
+        border-top: 1px solid var(--border);
+        margin: 0 0 44px;
+      }
+
+      .rights-grid {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 12px;
+        margin-top: 14px;
+      }
+      .right-item {
+        background: #fff;
+        border: 1px solid var(--border);
+        border-left: 3px solid var(--green-light);
+        border-radius: 0 8px 8px 0;
+        padding: 12px 16px;
+      }
+      .right-item h5 {
+        font-size: 0.85rem;
+        font-weight: 600;
+        color: var(--green);
+        margin-bottom: 3px;
+      }
+      .right-item p {
+        font-size: 0.82rem;
+        color: var(--muted);
+        margin-bottom: 0;
+        line-height: 1.5;
+      }
+
+      .dpdp-notice {
+        background: #f0faf4;
+        border: 1px solid #b7dfca;
+        border-radius: 10px;
+        padding: 18px 22px;
+        margin: 18px 0;
+        font-size: 0.87rem;
+        color: var(--green);
+      }
+      .dpdp-notice strong {
+        font-weight: 600;
+      }
+
+      .contact-box {
+        background: linear-gradient(135deg, #1b4332 0%, var(--green) 100%);
+        border-radius: 14px;
+        padding: 32px 36px;
+        color: white;
+        margin-top: 48px;
+      }
+      .contact-box h3 {
+        font-family: "Playfair Display", serif;
+        font-size: 1.2rem;
+        margin-bottom: 8px;
+      }
+      .contact-box p {
+        color: rgba(255, 255, 255, 0.85);
+        font-size: 0.9rem;
+        margin-bottom: 10px;
+      }
+      .contact-box a {
+        color: #fff;
+        font-weight: 600;
+        text-decoration: none;
+        border-bottom: 1px solid rgba(255, 255, 255, 0.5);
+      }
+
+      @media (max-width: 600px) {
+        .commitment-grid {
+          grid-template-columns: 1fr;
+        }
+        .rights-grid {
+          grid-template-columns: 1fr;
+        }
+        .hero h1 {
+          font-size: 1.9rem;
+        }
+        nav {
+          padding: 14px 18px;
+        }
+      }
+
+      /* =============================================
+         FOOTER — matches main site exactly
+         ============================================= */
+      .footer {
+        background-color: #0a2318;
+        background-image:
+          radial-gradient(
+            ellipse at 10% 50%,
+            rgba(30, 78, 54, 0.55) 0%,
+            transparent 60%
+          ),
+          radial-gradient(
+            ellipse at 90% 20%,
+            rgba(17, 47, 32, 0.7) 0%,
+            transparent 55%
+          );
+        color: #fcfbf7;
+        padding: 60px 0 0;
+      }
+
+      .footer-container {
+        width: 90%;
+        max-width: 1280px;
+        margin: 0 auto;
+      }
+
+      .footer-grid {
+        display: grid;
+        grid-template-columns: 1.4fr 1fr 1fr;
+        gap: 60px;
+        padding-bottom: 50px;
+        border-bottom: 1px solid rgba(212, 175, 55, 0.2);
+      }
+
+      .footer-logo {
+        font-family: "DM Serif Display", serif;
+        font-size: 1.8rem;
+        color: #fcfbf7;
+        display: block;
+        margin-bottom: 16px;
+        text-decoration: none;
+      }
+
+      .footer-tagline {
+        font-size: 0.95rem;
+        line-height: 1.7;
+        color: rgba(252, 251, 247, 0.65);
+        max-width: 280px;
+      }
+
+      .footer-eco-badge {
+        display: inline-flex;
+        align-items: center;
+        gap: 8px;
+        background: rgba(30, 78, 54, 0.5);
+        border: 1px solid rgba(212, 175, 55, 0.2);
+        border-radius: 50px;
+        padding: 6px 16px;
+        font-size: 0.8rem;
+        color: rgba(252, 251, 247, 0.65);
+        margin-top: 20px;
+      }
+
+      .footer-eco-dot {
+        width: 7px;
+        height: 7px;
+        border-radius: 50%;
+        background: #639922;
+        flex-shrink: 0;
+      }
+
+      .footer-col-title {
+        font-size: 0.8rem;
+        font-weight: 700;
+        letter-spacing: 2px;
+        text-transform: uppercase;
+        color: #d4af37;
+        margin-bottom: 20px;
+      }
+
+      .footer-links {
+        display: flex;
+        flex-direction: column;
+        gap: 12px;
+        list-style: none;
+      }
+
+      .footer-links a {
+        font-size: 0.95rem;
+        color: rgba(252, 251, 247, 0.7);
+        text-decoration: none;
+        display: flex;
+        align-items: center;
+        gap: 8px;
+        transition: color 0.2s ease;
+      }
+
+      .footer-links a::before {
+        content: "";
+        display: inline-block;
+        width: 4px;
+        height: 4px;
+        border-radius: 50%;
+        background: #d4af37;
+        opacity: 0.5;
+        flex-shrink: 0;
+      }
+
+      .footer-links a:hover {
+        color: #d4af37;
+      }
+
+      .footer-contact-item {
+        display: flex;
+        gap: 12px;
+        margin-bottom: 18px;
+        align-items: flex-start;
+      }
+
+      .footer-contact-icon {
+        width: 36px;
+        height: 36px;
+        background: rgba(212, 175, 55, 0.1);
+        border: 1px solid rgba(212, 175, 55, 0.2);
+        border-radius: 8px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 14px;
+        flex-shrink: 0;
+      }
+
+      .footer-contact-text {
+        font-size: 0.9rem;
+        color: rgba(252, 251, 247, 0.7);
+        line-height: 1.5;
+      }
+
+      .footer-contact-text strong {
+        display: block;
+        color: #fcfbf7;
+        font-size: 0.85rem;
+        margin-bottom: 3px;
+      }
+
+      .footer-bottom {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 22px 0;
+        font-size: 0.88rem;
+        color: rgba(252, 251, 247, 0.4);
+      }
+
+      .footer-bottom p a {
+        text-decoration: none;
+        color: rgba(252, 251, 247, 0.4);
+        transition: color 0.2s ease;
+      }
+
+      .footer-bottom p a:hover {
+        color: #d4af37;
+      }
+
+      .footer-bottom p a strong {
+        color: rgba(252, 251, 247, 0.4);
+        font-weight: 600;
+      }
+
+      .footer-bottom-links {
+        display: flex;
+        gap: 24px;
+      }
+
+      .footer-bottom-links a {
+        color: rgba(252, 251, 247, 0.4);
+        text-decoration: none;
+        transition: color 0.2s ease;
+      }
+
+      .footer-bottom-links a:hover {
+        color: #d4af37;
+      }
+
+      @media (max-width: 768px) {
+        .footer-grid {
+          grid-template-columns: 1fr;
+          gap: 40px;
+        }
+        .footer-tagline {
+          max-width: 100%;
+        }
+        .footer-bottom {
+          flex-direction: column;
+          gap: 15px;
+          text-align: center;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <nav>
+      <a href="https://www.arihant-packaging.com" class="nav-logo"
+        >Arihant Packaging</a
+      >
+      <a href="https://www.arihant-packaging.com" class="nav-link"
+        >← Back to Home</a
+      >
+    </nav>
+
+    <div class="hero">
+      <div class="hero-tag">Legal</div>
+      <h1>Privacy Policy</h1>
+      <p>
+        We respect your privacy. Here's exactly what data we collect and how we
+        handle it.
+      </p>
+    </div>
+
+    <div class="wrapper">
+      <div class="meta-bar">
+        <span><strong>Last Updated:</strong> April 17, 2026</span>
+        <span><strong>Applicable to:</strong> www.arihant-packaging.com</span>
+      </div>
+
+      <div class="commitment-grid">
+        <div class="commit-card">
+          <div class="icon">🔒</div>
+          <h4>No Selling of Data</h4>
+          <p>
+            We never sell or rent your personal information to any third party.
+          </p>
+        </div>
+        <div class="commit-card">
+          <div class="icon">📋</div>
+          <h4>Minimal Collection</h4>
+          <p>We only collect what's necessary to respond to your enquiry.</p>
+        </div>
+        <div class="commit-card">
+          <div class="icon">🇮🇳</div>
+          <h4>DPDP Act Compliant</h4>
+          <p>
+            In accordance with India's Digital Personal Data Protection Act,
+            2023.
+          </p>
+        </div>
+      </div>
+
+      <div class="section">
+        <h2><span class="section-number">1</span> Who We Are</h2>
+        <p>
+          This Privacy Policy applies to <strong>Arihant Packaging</strong>, a
+          manufacturer and trader of eco-friendly disposable paper products,
+          operating the website <strong>www.arihant-packaging.com</strong>.
+        </p>
+        <p>
+          For any privacy-related concerns, you may contact us at:
+          <a href="mailto:arihantpackagingdelhi@gmail.com"
+            >arihantpackagingdelhi@gmail.com</a
+          >
+        </p>
+      </div>
+      <hr class="divider" />
+
+      <div class="section">
+        <h2><span class="section-number">2</span> What Data We Collect</h2>
+        <p>
+          We collect only the following personal data, and only when you
+          voluntarily submit it through our enquiry form:
+        </p>
+        <table class="data-table">
+          <thead>
+            <tr>
+              <th>Data Collected</th>
+              <th>Why We Collect It</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>Full Name</td>
+              <td>To address you in our response</td>
+            </tr>
+            <tr>
+              <td>Email Address</td>
+              <td>To send you a reply to your enquiry</td>
+            </tr>
+            <tr>
+              <td>Phone Number (if provided)</td>
+              <td>To follow up, if required</td>
+            </tr>
+            <tr>
+              <td>Message / Enquiry Content</td>
+              <td>To understand and respond to your business requirement</td>
+            </tr>
+            <tr>
+              <td>Enquiry Category</td>
+              <td>To route your enquiry to the right team</td>
+            </tr>
+          </tbody>
+        </table>
+        <p>
+          We do <strong>not</strong> collect any sensitive personal data such as
+          financial information, government IDs, or health data.
+        </p>
+      </div>
+      <hr class="divider" />
+
+      <div class="section">
+        <h2><span class="section-number">3</span> How We Use Your Data</h2>
+        <p>
+          We use the information you provide solely for the following purposes:
+        </p>
+        <ul>
+          <li>To respond to your business enquiry via email or phone.</li>
+          <li>
+            To send product catalogues or pricing information you have
+            requested.
+          </li>
+          <li>To maintain a record of our business correspondence with you.</li>
+        </ul>
+        <p>
+          We will <strong>never</strong> use your data for unsolicited
+          marketing, profiling, or automated decision-making without your
+          explicit consent.
+        </p>
+      </div>
+      <hr class="divider" />
+
+      <div class="section">
+        <h2><span class="section-number">4</span> How We Store Your Data</h2>
+        <p>
+          Enquiries submitted through the Website are received directly into our
+          business email inbox (<a href="mailto:arihantpackagingdelhi@gmail.com"
+            >arihantpackagingdelhi@gmail.com</a
+          >). We do not operate a proprietary database of personal information.
+        </p>
+        <p>
+          We retain enquiry data for a reasonable business period to support
+          ongoing correspondence, and delete it when it is no longer needed.
+        </p>
+      </div>
+      <hr class="divider" />
+
+      <div class="section">
+        <h2><span class="section-number">5</span> Sharing of Data</h2>
+        <p>
+          We do <strong>not</strong> share, sell, rent, or trade your personal
+          information with any third party, except in the following limited
+          circumstances:
+        </p>
+        <ul>
+          <li>Where required by law, court order, or government authority.</li>
+          <li>
+            To protect the rights, property, or safety of Arihant Packaging or
+            others.
+          </li>
+        </ul>
+      </div>
+      <hr class="divider" />
+
+      <div class="section">
+        <h2><span class="section-number">6</span> Cookies</h2>
+        <p>
+          Our website may use basic browser cookies or analytics tools (such as
+          Google Analytics) to understand how visitors use the site. These
+          cookies do not collect personally identifiable information.
+        </p>
+        <p>
+          You can disable cookies in your browser settings at any time. Doing so
+          will not affect your ability to use the Website.
+        </p>
+      </div>
+      <hr class="divider" />
+
+      <div class="section">
+        <h2><span class="section-number">7</span> Your Rights</h2>
+        <p>
+          Under India's Digital Personal Data Protection (DPDP) Act, 2023, you
+          have the following rights as a data principal:
+        </p>
+        <div class="rights-grid">
+          <div class="right-item">
+            <h5>Right to Access</h5>
+            <p>Request details of the personal data we hold about you.</p>
+          </div>
+          <div class="right-item">
+            <h5>Right to Correction</h5>
+            <p>Ask us to correct inaccurate or incomplete data.</p>
+          </div>
+          <div class="right-item">
+            <h5>Right to Erasure</h5>
+            <p>Request deletion of your personal data from our records.</p>
+          </div>
+          <div class="right-item">
+            <h5>Right to Grievance</h5>
+            <p>
+              Raise a complaint with our team and receive a timely response.
+            </p>
+          </div>
+        </div>
+        <p style="margin-top: 16px">
+          To exercise any of the above rights, write to us at
+          <a href="mailto:arihantpackagingdelhi@gmail.com"
+            >arihantpackagingdelhi@gmail.com</a
+          >. We will respond within a reasonable timeframe.
+        </p>
+        <div class="dpdp-notice">
+          <strong>🇮🇳 DPDP Act, 2023 Compliance:</strong> This Privacy Policy is
+          drafted in alignment with the Digital Personal Data Protection Act,
+          2023 (India). Arihant Packaging acts as the
+          <em>Data Fiduciary</em> for all personal data collected through this
+          Website.
+        </div>
+      </div>
+      <hr class="divider" />
+
+      <div class="section">
+        <h2><span class="section-number">8</span> Third-Party Links</h2>
+        <p>
+          Our Website may contain links to third-party websites (e.g.,
+          Unnity.in). We are not responsible for the privacy practices or
+          content of those websites. We encourage you to read their privacy
+          policies independently.
+        </p>
+      </div>
+      <hr class="divider" />
+
+      <div class="section">
+        <h2><span class="section-number">9</span> Children's Privacy</h2>
+        <p>
+          This Website is intended for business-to-business use and is not
+          directed at children under the age of 18. We do not knowingly collect
+          personal data from minors.
+        </p>
+      </div>
+      <hr class="divider" />
+
+      <div class="section">
+        <h2><span class="section-number">10</span> Changes to This Policy</h2>
+        <p>
+          We may update this Privacy Policy from time to time. Any changes will
+          be posted on this page with a revised "Last Updated" date. We
+          encourage you to review this page periodically.
+        </p>
+        <p>
+          Continued use of the Website after any changes constitutes your
+          acceptance of the updated policy.
+        </p>
+      </div>
+
+      <div class="contact-box">
+        <h3>Privacy Concerns or Requests?</h3>
+        <p>
+          If you wish to access, correct, or delete your data — or have any
+          privacy-related questions — please contact us directly.
+        </p>
+        <p>
+          📧
+          <a href="mailto:arihantpackagingdelhi@gmail.com"
+            >arihantpackagingdelhi@gmail.com</a
+          >
+        </p>
+        <p>🏢 122A/14 Gautam Nagar, Second Floor, New Delhi – 110049</p>
+      </div>
+    </div>
+
+    <!-- FOOTER — same as main site, all vars hardcoded -->
+    <footer class="footer" id="footer">
+      <div class="footer-container">
+        <div class="footer-grid">
+          <!-- Col 1: Brand -->
+          <div class="footer-brand">
+            <a href="https://www.arihant-packaging.com" class="footer-logo"
+              >Arihant Packaging</a
+            >
+            <p class="footer-tagline">
+              Delhi's leading manufacturer and trader of premium eco-friendly
+              disposable paper products — powering businesses across India.
+            </p>
+            <div class="footer-eco-badge">
+              <span class="footer-eco-dot"></span>
+              Eco-Conscious Manufacturing
+            </div>
+          </div>
+
+          <!-- Col 2: Quick Links -->
+          <div class="footer-col">
+            <p class="footer-col-title">Quick Links</p>
+            <ul class="footer-links">
+              <li>
+                <a href="https://www.arihant-packaging.com/#home">Home</a>
+              </li>
+              <li>
+                <a href="https://www.arihant-packaging.com/#about">About Us</a>
+              </li>
+              <li>
+                <a href="https://www.arihant-packaging.com/#b2b-supply"
+                  >B2B Supply</a
+                >
+              </li>
+              <li>
+                <a href="https://www.arihant-packaging.com/#divayu"
+                  >DIVAYU Brand</a
+                >
+              </li>
+              <li>
+                <a href="https://www.arihant-packaging.com/#gallery"
+                  >Product Gallery</a
+                >
+              </li>
+              <li>
+                <a href="https://www.arihant-packaging.com/#contact">Contact</a>
+              </li>
+            </ul>
+          </div>
+
+          <!-- Col 3: Contact -->
+          <div class="footer-col">
+            <p class="footer-col-title">Get in Touch</p>
+            <div class="footer-contact-item">
+              <div class="footer-contact-icon">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  height="24px"
+                  viewBox="0 -960 960 960"
+                  width="24px"
+                  fill="#F3F3F3"
+                >
+                  <path
+                    d="M638-80 468-250l56-56 114 114 226-226 56 56L638-80ZM480-520l320-200H160l320 200Zm0 80L160-640v400h206l80 80H160q-33 0-56.5-23.5T80-240v-480q0-33 23.5-56.5T160-800h640q33 0 56.5 23.5T880-720v174l-80 80v-174L480-440Zm0 0Zm0-80Zm0 80Z"
+                  />
+                </svg>
+              </div>
+              <div class="footer-contact-text">
+                <strong>Email</strong>
+                arihantpackagingdelhi@gmail.com
+              </div>
+            </div>
+            <div class="footer-contact-item">
+              <div class="footer-contact-icon">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  height="24px"
+                  viewBox="0 -960 960 960"
+                  width="24px"
+                  fill="#F3F3F3"
+                >
+                  <path
+                    d="M520-520v-240h80v104l200-200 56 56-200 200h104v80H520Zm278 400q-125 0-247-54.5T329-329Q229-429 174.5-551T120-798q0-18 12-30t30-12h162q14 0 25 9.5t13 22.5l26 140q2 16-1 27t-11 19l-97 98q20 37 47.5 71.5T387-386q31 31 65 57.5t72 48.5l94-94q9-9 23.5-13.5T670-390l138 28q14 4 23 14.5t9 23.5v162q0 18-12 30t-30 12ZM241-600l66-66-17-94h-89q5 41 14 81t26 79Zm358 358q39 17 79.5 27t81.5 13v-88l-94-19-67 67ZM241-600Zm358 358Z"
+                  />
+                </svg>
+              </div>
+              <div class="footer-contact-text">
+                <strong>Phone</strong>
+                +91 88266 20791
+              </div>
+            </div>
+            <div class="footer-contact-item">
+              <div class="footer-contact-icon">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  height="24px"
+                  viewBox="0 -960 960 960"
+                  width="24px"
+                  fill="#F3F3F3"
+                >
+                  <path
+                    d="M120-120v-560h160v-160h400v320h160v400H520v-160h-80v160H120Zm80-80h80v-80h-80v80Zm0-160h80v-80h-80v80Zm0-160h80v-80h-80v80Zm160 160h80v-80h-80v80Zm0-160h80v-80h-80v80Zm0-160h80v-80h-80v80Zm160 320h80v-80h-80v80Zm0-160h80v-80h-80v80Zm0-160h80v-80h-80v80Zm160 480h80v-80h-80v80Zm0-160h80v-80h-80v80Z"
+                  />
+                </svg>
+              </div>
+              <div class="footer-contact-text">
+                <strong>Head Office</strong>
+                122A/14 Gautam Nagar, Second Floor, New Delhi - 110049
+              </div>
+            </div>
+            <div class="footer-contact-item">
+              <div class="footer-contact-icon">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  height="24px"
+                  viewBox="0 -960 960 960"
+                  width="24px"
+                  fill="#F3F3F3"
+                >
+                  <path
+                    d="M80-80v-481l280-119v80l200-80v120h320v480H80Zm80-80h640v-320H480v-82l-200 80v-78l-120 53v347Zm280-80h80v-160h-80v160Zm-160 0h80v-160h-80v160Zm320 0h80v-160h-80v160Zm280-320H680l40-320h120l40 320ZM160-160h640-640Z"
+                  />
+                </svg>
+              </div>
+              <div class="footer-contact-text">
+                <strong>Manufacturing</strong>
+                Manufacturing unit - Village daha, Sirsi Road Backside Madhuban
+                Police Complex, Karnal, Haryana 132001
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="footer-bottom">
+          <p>&copy; 2026 Arihant Packaging. All Rights Reserved.</p>
+          <p>
+            Designed &amp; Developed by Team
+            <a href="https://unnity.in" target="_blank"
+              ><strong>Unnity.in</strong></a
+            >
+          </p>
+          <div class="footer-bottom-links">
+            <a href="/arihant/privacy-policy.html">Privacy Policy</a>
+            <a href="/arihant/terms-and-conditions.html">Terms of Service</a>
+          </div>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>

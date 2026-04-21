@@ -1,0 +1,826 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Terms & Conditions | Arihant Packaging</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700&family=DM+Sans:wght@300;400;500&display=swap"
+      rel="stylesheet"
+    />
+    <style>
+      :root {
+        --green: #2d6a4f;
+        --green-light: #40916c;
+        --green-pale: #d8f3dc;
+        --cream: #faf9f6;
+        --text: #1b2a22;
+        --muted: #6b7c74;
+        --border: #e0ece5;
+      }
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+      body {
+        font-family: "DM Sans", sans-serif;
+        background: var(--cream);
+        color: var(--text);
+        font-size: 15px;
+        line-height: 1.8;
+      }
+
+      /* NAV */
+      nav {
+        background: #fff;
+        border-bottom: 1px solid var(--border);
+        padding: 18px 40px;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        position: sticky;
+        top: 0;
+        z-index: 100;
+      }
+      .nav-logo {
+        font-family: "Playfair Display", serif;
+        font-size: 1.3rem;
+        color: var(--green);
+        text-decoration: none;
+        font-weight: 700;
+      }
+      .nav-link {
+        color: var(--green-light);
+        text-decoration: none;
+        font-size: 0.85rem;
+        font-weight: 500;
+        letter-spacing: 0.04em;
+      }
+      .nav-link:hover {
+        text-decoration: underline;
+      }
+
+      /* HERO BANNER */
+      .hero {
+        background: linear-gradient(
+          135deg,
+          var(--green) 0%,
+          var(--green-light) 100%
+        );
+        color: white;
+        padding: 64px 40px 48px;
+        text-align: center;
+        position: relative;
+        overflow: hidden;
+      }
+      .hero::before {
+        content: "";
+        position: absolute;
+        width: 400px;
+        height: 400px;
+        background: rgba(255, 255, 255, 0.04);
+        border-radius: 50%;
+        top: -100px;
+        right: -80px;
+      }
+      .hero-tag {
+        display: inline-block;
+        background: rgba(255, 255, 255, 0.15);
+        border: 1px solid rgba(255, 255, 255, 0.3);
+        color: #fff;
+        font-size: 0.72rem;
+        font-weight: 500;
+        letter-spacing: 0.12em;
+        text-transform: uppercase;
+        padding: 5px 14px;
+        border-radius: 20px;
+        margin-bottom: 18px;
+      }
+      .hero h1 {
+        font-family: "Playfair Display", serif;
+        font-size: 2.6rem;
+        font-weight: 700;
+        margin-bottom: 10px;
+      }
+      .hero p {
+        color: rgba(255, 255, 255, 0.8);
+        font-size: 0.92rem;
+      }
+
+      /* LAYOUT */
+      .wrapper {
+        max-width: 860px;
+        margin: 0 auto;
+        padding: 56px 24px 80px;
+      }
+
+      /* LAST UPDATED */
+      .meta-bar {
+        display: flex;
+        align-items: center;
+        gap: 24px;
+        background: #fff;
+        border: 1px solid var(--border);
+        border-radius: 10px;
+        padding: 14px 22px;
+        margin-bottom: 40px;
+        font-size: 0.82rem;
+        color: var(--muted);
+      }
+      .meta-bar span strong {
+        color: var(--text);
+      }
+
+      /* SECTION */
+      .section {
+        margin-bottom: 44px;
+      }
+      .section-number {
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        width: 30px;
+        height: 30px;
+        background: var(--green-pale);
+        color: var(--green);
+        font-weight: 700;
+        font-size: 0.78rem;
+        border-radius: 50%;
+        margin-right: 10px;
+        flex-shrink: 0;
+      }
+      .section h2 {
+        font-family: "Playfair Display", serif;
+        font-size: 1.2rem;
+        font-weight: 600;
+        color: var(--green);
+        margin-bottom: 14px;
+        display: flex;
+        align-items: center;
+      }
+      .section p {
+        color: #3a4a41;
+        margin-bottom: 10px;
+      }
+      .section ul {
+        padding-left: 20px;
+      }
+      .section ul li {
+        color: #3a4a41;
+        margin-bottom: 6px;
+      }
+
+      /* DIVIDER */
+      hr.divider {
+        border: none;
+        border-top: 1px solid var(--border);
+        margin: 0 0 44px;
+      }
+
+      /* CONTACT BOX */
+      .contact-box {
+        background: linear-gradient(
+          135deg,
+          var(--green) 0%,
+          var(--green-light) 100%
+        );
+        border-radius: 14px;
+        padding: 32px 36px;
+        color: white;
+        margin-top: 48px;
+      }
+      .contact-box h3 {
+        font-family: "Playfair Display", serif;
+        font-size: 1.2rem;
+        margin-bottom: 8px;
+      }
+      .contact-box p {
+        color: rgba(255, 255, 255, 0.85);
+        font-size: 0.9rem;
+        margin-bottom: 14px;
+      }
+      .contact-box a {
+        color: #fff;
+        font-weight: 600;
+        text-decoration: none;
+        border-bottom: 1px solid rgba(255, 255, 255, 0.5);
+      }
+
+      /* =============================================
+         FOOTER — matches main site exactly
+         ============================================= */
+      .footer {
+        background-color: #0a2318;
+        background-image:
+          radial-gradient(
+            ellipse at 10% 50%,
+            rgba(30, 78, 54, 0.55) 0%,
+            transparent 60%
+          ),
+          radial-gradient(
+            ellipse at 90% 20%,
+            rgba(17, 47, 32, 0.7) 0%,
+            transparent 55%
+          );
+        color: #fcfbf7;
+        padding: 60px 0 0;
+      }
+
+      .footer-container {
+        width: 90%;
+        max-width: 1280px;
+        margin: 0 auto;
+      }
+
+      .footer-grid {
+        display: grid;
+        grid-template-columns: 1.4fr 1fr 1fr;
+        gap: 60px;
+        padding-bottom: 50px;
+        border-bottom: 1px solid rgba(212, 175, 55, 0.2);
+      }
+
+      .footer-logo {
+        font-family: "DM Serif Display", serif;
+        font-size: 1.8rem;
+        color: #fcfbf7;
+        display: block;
+        margin-bottom: 16px;
+        text-decoration: none;
+      }
+
+      .footer-tagline {
+        font-size: 0.95rem;
+        line-height: 1.7;
+        color: rgba(252, 251, 247, 0.65);
+        max-width: 280px;
+      }
+
+      .footer-eco-badge {
+        display: inline-flex;
+        align-items: center;
+        gap: 8px;
+        background: rgba(30, 78, 54, 0.5);
+        border: 1px solid rgba(212, 175, 55, 0.2);
+        border-radius: 50px;
+        padding: 6px 16px;
+        font-size: 0.8rem;
+        color: rgba(252, 251, 247, 0.65);
+        margin-top: 20px;
+      }
+
+      .footer-eco-dot {
+        width: 7px;
+        height: 7px;
+        border-radius: 50%;
+        background: #639922;
+        flex-shrink: 0;
+      }
+
+      .footer-col-title {
+        font-size: 0.8rem;
+        font-weight: 700;
+        letter-spacing: 2px;
+        text-transform: uppercase;
+        color: #d4af37;
+        margin-bottom: 20px;
+      }
+
+      .footer-links {
+        display: flex;
+        flex-direction: column;
+        gap: 12px;
+        list-style: none;
+      }
+
+      .footer-links a {
+        font-size: 0.95rem;
+        color: rgba(252, 251, 247, 0.7);
+        text-decoration: none;
+        display: flex;
+        align-items: center;
+        gap: 8px;
+        transition: color 0.2s ease;
+      }
+
+      .footer-links a::before {
+        content: "";
+        display: inline-block;
+        width: 4px;
+        height: 4px;
+        border-radius: 50%;
+        background: #d4af37;
+        opacity: 0.5;
+        flex-shrink: 0;
+      }
+
+      .footer-links a:hover {
+        color: #d4af37;
+      }
+
+      .footer-contact-item {
+        display: flex;
+        gap: 12px;
+        margin-bottom: 18px;
+        align-items: flex-start;
+      }
+
+      .footer-contact-icon {
+        width: 36px;
+        height: 36px;
+        background: rgba(212, 175, 55, 0.1);
+        border: 1px solid rgba(212, 175, 55, 0.2);
+        border-radius: 8px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 14px;
+        flex-shrink: 0;
+      }
+
+      .footer-contact-text {
+        font-size: 0.9rem;
+        color: rgba(252, 251, 247, 0.7);
+        line-height: 1.5;
+      }
+
+      .footer-contact-text strong {
+        display: block;
+        color: #fcfbf7;
+        font-size: 0.85rem;
+        margin-bottom: 3px;
+      }
+
+      .footer-bottom {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 22px 0;
+        font-size: 0.88rem;
+        color: rgba(252, 251, 247, 0.4);
+      }
+
+      .footer-bottom p a {
+        text-decoration: none;
+        color: rgba(252, 251, 247, 0.4);
+        transition: color 0.2s ease;
+      }
+
+      .footer-bottom p a:hover {
+        color: #d4af37;
+      }
+
+      .footer-bottom p a strong {
+        color: rgba(252, 251, 247, 0.4);
+        font-weight: 600;
+      }
+
+      .footer-bottom-links {
+        display: flex;
+        gap: 24px;
+      }
+
+      .footer-bottom-links a {
+        color: rgba(252, 251, 247, 0.4);
+        text-decoration: none;
+        transition: color 0.2s ease;
+      }
+
+      .footer-bottom-links a:hover {
+        color: #d4af37;
+      }
+
+      @media (max-width: 768px) {
+        .footer-grid {
+          grid-template-columns: 1fr;
+          gap: 40px;
+        }
+        .footer-tagline {
+          max-width: 100%;
+        }
+        .footer-bottom {
+          flex-direction: column;
+          gap: 15px;
+          text-align: center;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <nav>
+      <a href="https://www.arihant-packaging.com" class="nav-logo"
+        >Arihant Packaging</a
+      >
+      <a href="https://www.arihant-packaging.com" class="nav-link"
+        >← Back to Home</a
+      >
+    </nav>
+
+    <div class="hero">
+      <div class="hero-tag">Legal</div>
+      <h1>Terms &amp; Conditions</h1>
+      <p>
+        Please read these terms carefully before using our website or placing an
+        enquiry.
+      </p>
+    </div>
+
+    <div class="wrapper">
+      <div class="meta-bar">
+        <span><strong>Last Updated:</strong> April 17, 2026</span>
+        <span><strong>Applicable to:</strong> www.arihant-packaging.com</span>
+      </div>
+
+      <!-- 1 -->
+      <div class="section">
+        <h2><span class="section-number">1</span> Acceptance of Terms</h2>
+        <p>
+          By accessing or using the website
+          <strong>www.arihant-packaging.com</strong> ("Website"), you agree to
+          be bound by these Terms and Conditions. If you do not agree to these
+          terms, please discontinue use of the Website immediately.
+        </p>
+        <p>
+          These terms apply to all visitors, enquiry senders, and business
+          partners who interact with Arihant Packaging through this Website.
+        </p>
+      </div>
+      <hr class="divider" />
+
+      <!-- 2 -->
+      <div class="section">
+        <h2><span class="section-number">2</span> About Arihant Packaging</h2>
+        <p>
+          Arihant Packaging is a manufacturer and trader of eco-friendly
+          disposable paper products, operating through two verticals:
+        </p>
+        <ul>
+          <li>
+            <strong>B2B Raw Material Supply</strong> — Paper cup blanks, cup
+            bottoms, coated reels, and related materials for manufacturers.
+          </li>
+          <li>
+            <strong>DIVAYU Brand</strong> — Finished, ready-to-use premium paper
+            cups and related products sold to businesses.
+          </li>
+        </ul>
+        <p>
+          Head Office: 122A/14 Gautam Nagar, Second Floor, New Delhi – 110049<br />
+          Manufacturing Unit: Village Daha, Sirsi Road, Karnal, Haryana – 132001
+        </p>
+      </div>
+      <hr class="divider" />
+
+      <!-- 3 -->
+      <div class="section">
+        <h2><span class="section-number">3</span> Use of the Website</h2>
+        <p>
+          This Website is intended for informational and business enquiry
+          purposes only. You agree to use this Website lawfully and not to:
+        </p>
+        <ul>
+          <li>
+            Misrepresent your identity or business credentials when submitting
+            an enquiry.
+          </li>
+          <li>
+            Attempt to gain unauthorised access to any part of the Website.
+          </li>
+          <li>
+            Copy, reproduce, or redistribute any content from this Website
+            without prior written permission.
+          </li>
+          <li>Use the Website for any fraudulent or unlawful purpose.</li>
+        </ul>
+      </div>
+      <hr class="divider" />
+
+      <!-- 4 -->
+      <div class="section">
+        <h2><span class="section-number">4</span> Enquiries &amp; Orders</h2>
+        <p>
+          Submitting an enquiry through the contact form on this Website does
+          <strong>not</strong> constitute a confirmed purchase order. All orders
+          are subject to:
+        </p>
+        <ul>
+          <li>
+            Formal confirmation by Arihant Packaging via email or written
+            agreement.
+          </li>
+          <li>
+            Availability of stock and production capacity at the time of order.
+          </li>
+          <li>Mutual agreement on pricing, quantity, and delivery terms.</li>
+        </ul>
+        <p>
+          We reserve the right to accept or decline any enquiry or order at our
+          sole discretion.
+        </p>
+      </div>
+      <hr class="divider" />
+
+      <!-- 5 -->
+      <div class="section">
+        <h2><span class="section-number">5</span> Pricing</h2>
+        <p>
+          All prices quoted — whether on the Website, in catalogues, or during
+          enquiry responses — are indicative and subject to change without prior
+          notice. Final pricing will be agreed upon in writing before order
+          confirmation.
+        </p>
+        <p>
+          All applicable taxes including <strong>GST</strong> shall be charged
+          as per prevailing Indian tax law and will be specified in the formal
+          invoice/order confirmation.
+        </p>
+      </div>
+      <hr class="divider" />
+
+      <!-- 6 -->
+      <div class="section">
+        <h2><span class="section-number">6</span> Payment Terms</h2>
+        <p>
+          Payment terms (advance payment, credit period, cheque, NEFT/RTGS/UPI)
+          will be mutually agreed upon at the time of order confirmation.
+          Arihant Packaging reserves the right to withhold dispatch until
+          payment or credit conditions are satisfactorily met.
+        </p>
+        <p>
+          Late payments may attract interest charges as mutually agreed in
+          writing.
+        </p>
+      </div>
+      <hr class="divider" />
+
+      <!-- 7 -->
+      <div class="section">
+        <h2><span class="section-number">7</span> Delivery &amp; Shipping</h2>
+        <p>
+          Delivery timelines are estimates and may vary based on order size,
+          production schedules, and logistics conditions. Arihant Packaging is
+          not liable for delays caused by circumstances beyond our reasonable
+          control, including natural events, logistics disruptions, or
+          government restrictions.
+        </p>
+        <p>
+          Risk of loss or damage to goods passes to the buyer upon handover to
+          the transporter, unless otherwise agreed in writing.
+        </p>
+      </div>
+      <hr class="divider" />
+
+      <!-- 8 -->
+      <div class="section">
+        <h2><span class="section-number">8</span> Returns &amp; Refunds</h2>
+        <p>
+          Returns or replacements will be considered only in the following
+          circumstances:
+        </p>
+        <ul>
+          <li>
+            Products have a proven manufacturing defect reported within
+            <strong>7 days</strong> of delivery.
+          </li>
+          <li>
+            Wrong product or quantity delivered, as against the confirmed order.
+          </li>
+        </ul>
+        <p>
+          Claims must be made in writing to
+          <a href="mailto:arihantpackagingdelhi@gmail.com"
+            >arihantpackagingdelhi@gmail.com</a
+          >
+          along with photographic evidence. Arihant Packaging's decision on
+          returns/replacements shall be final.
+        </p>
+        <p>
+          No refunds or returns will be accepted for customised or printed
+          products unless there is a manufacturing defect.
+        </p>
+      </div>
+      <hr class="divider" />
+
+      <!-- 9 -->
+      <div class="section">
+        <h2><span class="section-number">9</span> Intellectual Property</h2>
+        <p>
+          All content on this Website — including text, images, the
+          <strong>DIVAYU</strong> brand name and logo, product photographs, and
+          website design — is the exclusive intellectual property of Arihant
+          Packaging and is protected under applicable Indian intellectual
+          property laws.
+        </p>
+        <p>
+          No content may be copied, reproduced, distributed, or used
+          commercially without prior written consent from Arihant Packaging.
+        </p>
+      </div>
+      <hr class="divider" />
+
+      <!-- 10 -->
+      <div class="section">
+        <h2><span class="section-number">10</span> Limitation of Liability</h2>
+        <p>
+          To the fullest extent permitted by law, Arihant Packaging's liability
+          in connection with any product, service, or Website interaction shall
+          not exceed the value of the confirmed order in question.
+        </p>
+        <p>
+          We are not liable for any indirect, incidental, or consequential loss
+          arising from the use of our products or Website, including loss of
+          business, profits, or reputation.
+        </p>
+      </div>
+      <hr class="divider" />
+
+      <!-- 11 -->
+      <div class="section">
+        <h2><span class="section-number">11</span> Disclaimer</h2>
+        <p>
+          The information on this Website is provided in good faith and for
+          general information purposes. While we strive for accuracy, we make no
+          warranty that the Website is error-free or continuously available. We
+          reserve the right to modify or discontinue any part of the Website at
+          any time without notice.
+        </p>
+      </div>
+      <hr class="divider" />
+
+      <!-- 12 -->
+      <div class="section">
+        <h2>
+          <span class="section-number">12</span> Governing Law &amp;
+          Jurisdiction
+        </h2>
+        <p>
+          These Terms and Conditions are governed by the laws of India,
+          including the <em>Indian Contract Act, 1872</em> and the
+          <em>Information Technology Act, 2000</em>, as applicable.
+        </p>
+        <p>
+          Any disputes arising out of or in connection with these Terms shall be
+          subject to the exclusive jurisdiction of the courts of
+          <strong>New Delhi, India</strong>.
+        </p>
+      </div>
+      <hr class="divider" />
+
+      <!-- 13 -->
+      <div class="section">
+        <h2><span class="section-number">13</span> Changes to These Terms</h2>
+        <p>
+          We reserve the right to update these Terms and Conditions at any time.
+          The revised version will be posted on this page with an updated date.
+          Continued use of the Website after any changes constitutes your
+          acceptance of the revised terms.
+        </p>
+      </div>
+
+      <div class="contact-box">
+        <h3>Questions About These Terms?</h3>
+        <p>
+          If you have any questions or concerns about these Terms and
+          Conditions, please get in touch with us.
+        </p>
+        <p>
+          📧
+          <a href="mailto:arihantpackagingdelhi@gmail.com"
+            >arihantpackagingdelhi@gmail.com</a
+          >
+        </p>
+        <p>🏢 122A/14 Gautam Nagar, Second Floor, New Delhi – 110049</p>
+      </div>
+    </div>
+
+    <footer class="footer" id="footer">
+      <div class="footer-container">
+        <div class="footer-grid">
+          <!-- Col 1: Brand -->
+          <div class="footer-brand">
+            <a href="#" class="footer-logo">Arihant Packaging</a>
+            <p class="footer-tagline">
+              Delhi's leading manufacturer and trader of premium eco-friendly
+              disposable paper products — powering businesses across India.
+            </p>
+            <div class="footer-eco-badge">
+              <span class="footer-eco-dot"></span>
+              Eco-Conscious Manufacturing
+            </div>
+          </div>
+
+          <!-- Col 2: Quick Links -->
+          <div class="footer-col">
+            <p class="footer-col-title">Quick Links</p>
+            <ul class="footer-links">
+              <li><a href="#home">Home</a></li>
+              <li><a href="#about">About Us</a></li>
+              <li><a href="#b2b-supply">B2B Supply</a></li>
+              <li><a href="#divayu">DIVAYU Brand</a></li>
+              <li><a href="#gallery">Product Gallery</a></li>
+              <li><a href="#contact">Contact</a></li>
+            </ul>
+          </div>
+
+          <!-- Col 3: Contact -->
+          <div class="footer-col">
+            <p class="footer-col-title">Get in Touch</p>
+            <div class="footer-contact-item">
+              <div class="footer-contact-icon">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  height="24px"
+                  viewBox="0 -960 960 960"
+                  width="24px"
+                  fill="#F3F3F3"
+                >
+                  <path
+                    d="M638-80 468-250l56-56 114 114 226-226 56 56L638-80ZM480-520l320-200H160l320 200Zm0 80L160-640v400h206l80 80H160q-33 0-56.5-23.5T80-240v-480q0-33 23.5-56.5T160-800h640q33 0 56.5 23.5T880-720v174l-80 80v-174L480-440Zm0 0Zm0-80Zm0 80Z"
+                  />
+                </svg>
+              </div>
+              <div class="footer-contact-text">
+                <strong>Email</strong>
+                arihantpackagingdelhi@gmail.com
+              </div>
+            </div>
+            <div class="footer-contact-item">
+              <div class="footer-contact-icon">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  height="24px"
+                  viewBox="0 -960 960 960"
+                  width="24px"
+                  fill="#F3F3F3"
+                >
+                  <path
+                    d="M520-520v-240h80v104l200-200 56 56-200 200h104v80H520Zm278 400q-125 0-247-54.5T329-329Q229-429 174.5-551T120-798q0-18 12-30t30-12h162q14 0 25 9.5t13 22.5l26 140q2 16-1 27t-11 19l-97 98q20 37 47.5 71.5T387-386q31 31 65 57.5t72 48.5l94-94q9-9 23.5-13.5T670-390l138 28q14 4 23 14.5t9 23.5v162q0 18-12 30t-30 12ZM241-600l66-66-17-94h-89q5 41 14 81t26 79Zm358 358q39 17 79.5 27t81.5 13v-88l-94-19-67 67ZM241-600Zm358 358Z"
+                  />
+                </svg>
+              </div>
+              <div class="footer-contact-text">
+                <strong>Phone </strong>
+                +91 88266 20791
+              </div>
+            </div>
+            <div class="footer-contact-item">
+              <div class="footer-contact-icon">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  height="24px"
+                  viewBox="0 -960 960 960"
+                  width="24px"
+                  fill="#F3F3F3"
+                >
+                  <path
+                    d="M120-120v-560h160v-160h400v320h160v400H520v-160h-80v160H120Zm80-80h80v-80h-80v80Zm0-160h80v-80h-80v80Zm0-160h80v-80h-80v80Zm160 160h80v-80h-80v80Zm0-160h80v-80h-80v80Zm0-160h80v-80h-80v80Zm160 320h80v-80h-80v80Zm0-160h80v-80h-80v80Zm0-160h80v-80h-80v80Zm160 480h80v-80h-80v80Zm0-160h80v-80h-80v80Z"
+                  />
+                </svg>
+              </div>
+              <div class="footer-contact-text">
+                <strong>Head Office</strong>
+                122A/14 Gautam Nagar, Second Floor, New Delhi - 110049
+              </div>
+            </div>
+            <div class="footer-contact-item">
+              <div class="footer-contact-icon">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  height="24px"
+                  viewBox="0 -960 960 960"
+                  width="24px"
+                  fill="#F3F3F3"
+                >
+                  <path
+                    d="M80-80v-481l280-119v80l200-80v120h320v480H80Zm80-80h640v-320H480v-82l-200 80v-78l-120 53v347Zm280-80h80v-160h-80v160Zm-160 0h80v-160h-80v160Zm320 0h80v-160h-80v160Zm280-320H680l40-320h120l40 320ZM160-160h640-640Z"
+                  />
+                </svg>
+              </div>
+              <div class="footer-contact-text">
+                <strong>Manufacturing</strong>
+                Manufacturing unit - Village daha, Sirsi Road Backside Madhuban
+                Police Complex, Karnal, Haryana 132001
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="footer-bottom">
+          <p>&copy; 2026 Arihant Packaging. All Rights Reserved.</p>
+          <p>
+            Designed & Developed by Team
+            <a href="https://unnity.in" target="_blank"
+              ><strong class="terms-text">Unnity.in</strong></a
+            >
+          </p>
+          <div class="footer-bottom-links">
+            <a href="/arihant/privacy-policy.html">Privacy Policy</a>
+            <a href="/arihant/terms-and-conditions.html">Terms of Service</a>
+          </div>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>
